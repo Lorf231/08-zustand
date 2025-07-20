@@ -1,3 +1,5 @@
+export type Tag = "Todo" | "Work" | "Personal" | "Meeting" | "Shopping";
+
 export interface Note {
   id: number;
   title: string;
@@ -7,23 +9,8 @@ export interface Note {
   updatedAt: string;
 }
 
-export interface NoteFormData {
-  title: string;
-  content: string;
+export interface NewNoteData {
+  title: "";
+  content: "";
   tag: Tag;
-}
-
-export type Tag = "Todo" | "Work" | "Personal" | "Meeting" | "Shopping";
-
-export type Category = {
-  id: string;
-  name: string;
-  description: string;
-  createdAt: string;
-  updatedAt: string;
-};
-
-export interface FetchNotesValues {
-  notes: Note[];
-  totalPages: number;
 }
