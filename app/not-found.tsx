@@ -7,8 +7,21 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Page is not founded",
-  description: "Простий та ефективний застосунок для управління нотатками",
+  title: "Сторінку не знайдено",
+  description: "Сторінку, яку ви шукаєте, не існує",
+  openGraph: {
+    title: "Сторінку не знайдено",
+    description: "Сторінку, яку ви шукаєте, не існує",
+    url: "https://notehub.app/not-found",
+    images: [
+      {
+        url: "/page-note-found.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "page not found",
+      },
+    ],
+  },
 };
 
 const NotFound = () => {
