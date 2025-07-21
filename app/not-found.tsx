@@ -4,6 +4,12 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import css from "./not-found.module.css";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Page is not founded",
+  description: "Простий та ефективний застосунок для управління нотатками",
+};
 
 const NotFound = () => {
   const router = useRouter();
